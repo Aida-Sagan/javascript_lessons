@@ -49,3 +49,10 @@ const sum = nums.reduce( (acc, currNum) => {
 
 console.log('Summa: ', sum)
 
+const numbers1 = [1, 2, 3, 4, 5, 6, 7]
+const multi = numbers1.reduce( (acc, currNum) => {
+    return acc * currNum;
+}, 1)
+
+console.log('Multi: ', multi)
+
