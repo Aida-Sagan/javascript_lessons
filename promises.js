@@ -40,14 +40,35 @@ console.log('POKA!') */
 
 // console.log('Продолжаем делать другие дела ....')
 
-const loadBox = new Promise( (resolve, reject) => {
-    let success = Math.random() > 0.5;
+// const loadBox = new Promise( (resolve, reject) => {
+//     let success = Math.random() > 0.5;
 
-    setTimeout( () => {
-        // тернарный оператор
-        success ? resolve('Коробка открыта!!!') : reject('Ууупс, коробка пустая :(');
-    }, 2000);
-})
+//     setTimeout( () => {
+//         // тернарный оператор
+//         success ? resolve('Коробка открыта!!!') : reject('Ууупс, коробка пустая :(');
+//     }, 2000);
+// })
 
-loadBox.then(console.log)
-loadBox.catch(console.error)
+// loadBox.then(console.log)
+// loadBox.catch(console.error)
+
+// console.log('Загружаем факт о котиках ...')
+
+// fetch('https://catfact.ninja/fact')
+//     .then(response => response.json())
+//     .then(data => console.log('Fact: ', data.fact))
+//     .catch(error => console.error('Ошибка загрузки: ',error));
+
+async function getCatFact() {
+    try {
+        console.log('Загружаем факт о котиках ...');
+        let response = await fetch('https://catfact.ninja/fact');
+        let data = await response.json();
+
+        console.log('Fact:', data.fact)
+    } catch(error) {
+        console.log('Error!!!!', error);
+    }
+}
+
+getCatFact();
