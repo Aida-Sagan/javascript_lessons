@@ -26,3 +26,26 @@ const newNums = numbers.filter((num) => {
 })
 console.log(newNums); //[1, 3, 5]
 console.log(`Исходный массив: ${numbers}`) //Исходный массив: 1,2,3,4,5
+
+
+// reduce
+/***
+ * этот метод используется для преобразования данных в массиве. Проходится по массиву и аккумулирует рез-т 
+ * в одной переменной.
+ * 
+ * 
+ * ARRAY.reduce( (accumulator, currentValue ) => {
+ *      // логика обработки
+ *      return обновленное_значение_аккумулятора;
+ * }, начальное_значение)
+ */
+
+const nums = [10, 20, 30, 40, 50, 60, 70]
+
+// найти сумму всех чисел в массиве
+const sum = nums.reduce( (acc, currNum) => {
+    return acc + currNum;
+}, 0)
+
+console.log('Summa: ', sum)
+
