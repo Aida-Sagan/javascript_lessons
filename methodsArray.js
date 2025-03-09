@@ -56,3 +56,13 @@ const multi = numbers1.reduce( (acc, currNum) => {
 
 console.log('Multi: ', multi)
 
+// find max num in array
+const maxNum = nums.reduce( (max, numCurr ) => {
+    if (numCurr > max) {
+        return numCurr;
+    } else {
+        return max;
+    }
+}, nums[0])
+console.log(maxNum)
+
