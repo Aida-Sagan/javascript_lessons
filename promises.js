@@ -13,29 +13,41 @@ setTimeout( () => {
 
 console.log('POKA!') */
 
-console.log('Заказываем пиццу ...');
+// console.log('Заказываем пиццу ...');
 
-const pizzaOrder = new Promise( (resolve, reject) => {
+// const pizzaOrder = new Promise( (resolve, reject) => {
+//     setTimeout( () => {
+//         let success = Math.random() > 0.5;
+
+//         if(success) {
+//             resolve('Ура! Пицца доставлена!!!');
+//         } else {
+//             reject(':( ошибка: курьер потерялся....');
+//         }
+//     }, 4000)
+// }) 
+
+// pizzaOrder.then( (message) => {
+//     console.log(message)
+// })
+
+// /**
+//  * then(message => console.log(message))
+//  */
+
+// pizzaOrder.catch(error => console.error(error));
+// pizzaOrder.finally(() => console.log('ПРиятного аппетита!'));
+
+// console.log('Продолжаем делать другие дела ....')
+
+const loadBox = new Promise( (resolve, reject) => {
+    let success = Math.random() > 0.5;
+
     setTimeout( () => {
-        let success = Math.random() > 0.5;
-
-        if(success) {
-            resolve('Ура! Пицца доставлена!!!');
-        } else {
-            reject(':( ошибка: курьер потерялся....');
-        }
-    }, 4000)
-}) 
-
-pizzaOrder.then( (message) => {
-    console.log(message)
+        // тернарный оператор
+        success ? resolve('Коробка открыта!!!') : reject('Ууупс, коробка пустая :(');
+    }, 2000);
 })
 
-/**
- * then(message => console.log(message))
- */
-
-pizzaOrder.catch(error => console.error(error));
-pizzaOrder.finally(() => console.log('ПРиятного аппетита!'));
-
-console.log('Продолжаем делать другие дела ....')
+loadBox.then(console.log)
+loadBox.catch(console.error)
