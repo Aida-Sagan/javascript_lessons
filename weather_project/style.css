@@ -1,0 +1,56 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.5s ease-in-out;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+button {
+    width: 85%;
+    padding: 10px 20px;
+    border: none;
+    background: #87e8d8;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#searchBtn:hover {
+    background: #8effee;
+}
+
+#weatherInfo {
+    margin-top: 20px;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5 ease, transform 0.5s ease;
+}
+
+#weatherInfo.show {
+    opacity: 1;
+    transform: translateY(0);
+}
