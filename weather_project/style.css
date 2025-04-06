@@ -54,3 +54,17 @@ button {
     opacity: 1;
     transform: translateY(0);
 }
+
+.hidden {
+    display: none;
+}
+
+.weather-card {
+    background-color: rgba(101, 101, 101, 0.723);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 5px 15px rgba(8, 8, 8, 0.723);
+    display: inline-block;
+
+}
