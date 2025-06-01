@@ -1,6 +1,6 @@
 function counter() {
     let count = 5;
-
+    
     return function() {
         count++;
         return count;
@@ -84,4 +84,44 @@ function testConst() {
     temp = 'test';
     console.log('const = ', temp); // TypeError: Assignment to constant variable. - НЕЛЬЗЯ менять значение у конст
 }
-testConst();
+// testConst();
+
+
+
+// hoisting - всплытие
+
+
+// function declaration 
+/**
+ * функции function declaration 
+ */
+
+//function declaration 
+/**
+ * функции function declaration всплывают, и можем вызвыать их ДО обьявления
+ */
+DeclareFun(); //Hello from function declaration!
+function DeclareFun() {
+    console.log('Hello from function declaration!');
+}
+console.log('------------------------------------------------')
+
+
+// myFun(); //ReferenceError: Cannot access 'myFun' before initialization
+// function expression
+/**
+ * функции function expression НЕ всплывают, и НЕ можем вызвыать их ДО обьявления
+ */
+let myFun = function TestFun() {
+    console.log('Hello from function < expression >!')
+}
+myFun(); // Hello from function < expression >!
+
+console.log('------------------------------------------------')
+
+// arrow function
+// testFun(); // ReferenceError: Cannot access 'testFun' before initialization
+let testFun = () => {
+    console.log('Hello from  < arrow > function!')
+}
+testFun(); //Hello from  < arrow > function!
