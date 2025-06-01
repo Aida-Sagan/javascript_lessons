@@ -125,3 +125,35 @@ let testFun = () => {
     console.log('Hello from  < arrow > function!')
 }
 testFun(); //Hello from  < arrow > function!
+
+
+
+
+
+
+
+function printNumbers() {
+    for(let i = 1; i <= 5; i++) {
+        setTimeout(() => {
+            console.log('i = ', i);
+        }, i * 1000);
+    }
+}
+// 1000 ms = 1 s
+/**
+ * i = 1, 1 <= 5 (TRUE)=> 'i = 1' (вып-ся через 1 * 1000 = 1 сек) => i = 2
+ * i = 2, 2 <= 5 (TRUE) => 'i = 2' (вып-ся через 2 * 1000 = 2 сек) => i = 3
+ * i = 3, 3 <= 5 (TRUE) => 'i = 3' (вып-ся через 3 * 1000 = 3 сек) => i = 4
+ * i = 4, 4 <= 5 => (вып-ся через 4 * 1000 = 4 сек) => i = 5
+ * i = 5 5<= 5 => (вып-ся через 5 * 1000 = 5 сек) => i = 6
+ * i = 6 6 <= 5 (FALSE)
+ */
+
+printNumbers(); 
+/**
+ * 1 
+ * 2
+ * 3
+ * 4
+ * 5 - через 5 секунд
+ */
