@@ -1,0 +1,50 @@
+body {
+    background-color: #9eb9c754;
+}
+
+.container {
+    max-width: 70%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 8px 20px rgb(0, 0, 0, 0.1);
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 30px
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.controls input,
+.controls select,
+.controls button {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.controls button{
+    background-color: #7da1b6;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.controls button:hover {
+    background-color: #405460;
+
+}
+
+.movie-list{ 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
