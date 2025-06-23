@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Каталог книг</title>
+</head>
+<body>
+    <main>
+        <div class="controls">
+            <h1>Каталог книг</h1>
+            <input type="text" id="book-search" placeholder="Поиск по названию книги...">
+            <select id="select-genre">
+                <option value="all">Все книги</option>
+                <option value="фантастика">Фантастика</option>
+                <option value="роман">Роман</option>
+                <option value="детектив">Детектив</option>
+                <option value="науч-литра">Научная литература</option>
+            </select>
+            <button id="reset-btn">Сбросить фильтры</button>
+        </div>
+        <section id="books-shelf"></section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
