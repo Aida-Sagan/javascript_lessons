@@ -1,0 +1,59 @@
+body {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f9f9f9f9;
+}
+
+#habitInput,
+#nameInput {
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+#habitInput,
+#nameInput:focus {
+    outline: none;
+}
+
+#addHabbitBtn,
+#saveBtn{
+     border-radius: 20px;
+     padding: 15px;
+     font-size: 15px;
+     background-color: rgb(118, 118, 72);
+     border: none;
+     color: white;
+     font-weight: 600;
+     cursor: pointer;
+}
+
+#addHabbitBtn:hover,
+#saveBtn:hover {
+ background-color: rgb(169, 169, 88);
+}
+#resetBtn {
+    background-color: #b3737385;
+     border-radius: 20px;
+     padding: 15px;
+     font-size: 15px;
+      color: white;
+     font-weight: 600;
+     cursor: pointer;
+     margin-top: 30px;
+     border: none;
+}
+
+#resetBtn:focus{
+    outline: none;
+}
+#resetBtn:hover{
+    background-color: #f49f9f85;
+}
+
+.completed {
+    color: green;
+    font-weight: 600;
+}
