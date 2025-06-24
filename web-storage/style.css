@@ -1,0 +1,52 @@
+body {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+}
+
+#habitInput {
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 20px;
+    border: 1px solid gray;
+}
+#habitInput:focus {
+    outline: none;
+}
+
+
+#addHabitBtn {
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 15px;
+    background-color: rgb(255, 255, 3);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#addHabitBtn:hover {
+    background-color: burlywood;
+}
+
+#resetBtn {
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 15px;
+    background-color: rgb(247, 3, 255);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+#resetBtn:hover {
+    background-color: blueviolet;
+}
+
+.completed {
+    color: green;
+    font-weight: 600;
+}
