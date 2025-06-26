@@ -87,13 +87,14 @@ body {
 }
 
 .delete-btn {
-    padding: 5px;
+    padding: 10px;
     background-color: #749BC2;
     cursor: pointer;
     border: none;
     color: #f9f9f9;
-    border-radius: 8px;
+    border-radius: 12px;
     margin: auto 12px auto auto;
+    font-family: "Montserrat", sans-serif;
 }
 
 .completed {
