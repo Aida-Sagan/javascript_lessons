@@ -44,7 +44,7 @@ const addHabitBtn = document.getElementById('addHabitBtn');
 const habitList = document.getElementById('habitList');
 const resetBtn = document.getElementById('resetBtn');
 
-let habits = JSON.parse(localStorage.getItem('habits')) || [];
+const habits = JSON.parse(localStorage.getItem('habits') || '[]');
 
 //функция по сохранению привычки
 
@@ -55,15 +55,36 @@ function saveHabit() {
 function renderHabits() {
     habitList.innerHTML = '';
 
-    habits.forEach((habit, index) => {
-        const li = document.createElement('li');
-        li.textContent = habit.name;
-        if (habit.completedToday) {
-            li.classList.add('completed');
-            li.textContent += '(выполнено)';
+    habits.forEach((habit) => {
+        const div = document.createElement('div');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = habit.isCompleted || false;
+
+        const label = document.createElement('label');
+        label.textContent = habit.name;
+        label.prepend(checkbox);
+
+        const btn = document.createElement('button');
+        btn.textContent = 'Удалить';
+        btn.classList.add('delete-btn');
+        btn.onclick = () => deleteHabit(habit);
+
+        checkbox.addEventListener('change', () => {
+            habit.isCompleted = checkbox.checked;
+            saveHabit();
+            renderHabits()
+        })
+        
+        if (habit.isCompleted) {
+            div.classList.add('completed');
         }
 
-        habitList.appendChild(li);
+        div.appendChild(checkbox);
+        div.appendChild(label);
+        div.appendChild(btn);
+        habitList.appendChild(div);
+        
     })
 }
 
@@ -72,7 +93,7 @@ addHabitBtn.addEventListener('click', () => {
     if (habitName) {
         habits.push({
             name: habitName,
-            completedToday: false
+            isCompleted: false
         })
         saveHabit();
         renderHabits();
@@ -81,9 +102,18 @@ addHabitBtn.addEventListener('click', () => {
 })
 
 resetBtn.addEventListener('click', () => {
-    habits.forEach(h => h.completedToday = false);
+    habits.forEach(h => h.isCompleted = false);
     saveHabit();
     renderHabits();
 })
+
+function deleteHabit(h) {
+    const index = habits.indexOf(h);
+    if (index !== -1) {
+        habits.splice(index, 1);
+        saveHabit();
+        renderHabits();
+    }
+}
 
 renderHabits();

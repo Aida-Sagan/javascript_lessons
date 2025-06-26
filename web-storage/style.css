@@ -1,49 +1,99 @@
 body {
+    background-color: #91C8E4; 
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+
+.habitTracker {
     max-width: 500px;
     margin: 30px auto;
-    padding: 20px;
+    padding: 40px;
     border-radius: 20px;
     background-color: #f9f9f9;
+    box-shadow: 5px 8px 20px rgb(0, 0, 0, 0.1);
 }
 
 #habitInput {
-    padding: 15px;
+    padding: 10px 15px;
+    font-family: "Montserrat", sans-serif;
     font-size: 18px;
-    border-radius: 20px;
-    border: 1px solid gray;
+    border-radius: 16px;
+    border: 1px solid rgba(128, 128, 128, 0.516);
+    margin-right: 20px;
 }
+
 #habitInput:focus {
     outline: none;
 }
 
-
 #addHabitBtn {
     border-radius: 20px;
     padding: 15px;
+    font-family: "Montserrat", sans-serif;
     font-size: 15px;
-    background-color: rgb(255, 255, 3);
+    background-color: #83b5ce;
     border: none;
     font-weight: 600;
     cursor: pointer;
+    color: #f9f9f9;
 }
 
 #addHabitBtn:hover {
-    background-color: burlywood;
+    background-color: #749BC2;
+    box-shadow: 2px 5px 17px #749BC2;
 }
 
 #resetBtn {
     border-radius: 20px;
     padding: 15px;
+    font-family: "Montserrat", sans-serif;
     font-size: 15px;
-    background-color: rgb(247, 3, 255);
+    background-color: #83b5ce;
     border: none;
     font-weight: 600;
     cursor: pointer;
     margin-top: 30px;
+    color: #f9f9f9;
 }
 
 #resetBtn:hover {
-    background-color: blueviolet;
+    background-color: #749BC2;
+    box-shadow: 2px 5px 17px #749BC2;
+}
+
+#habitList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#habitList div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 12px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 1px 4px 16px rgb(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+#habitList div input[type="checkbox"] {
+    transform: scale(1.5);
+    accent-color: #91C8E4;
+}
+
+.delete-btn {
+    padding: 5px;
+    background-color: #749BC2;
+    cursor: pointer;
+    border: none;
+    color: #f9f9f9;
+    border-radius: 8px;
+    margin: auto 12px auto auto;
 }
 
 .completed {
